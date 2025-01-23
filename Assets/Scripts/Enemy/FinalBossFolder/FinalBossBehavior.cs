@@ -5,22 +5,25 @@ public class FinalBossBehavior : MonoBehaviour
 {
     //Stats
     public float health = 90;
-
-
-
-    Vector3 defaultPosition;
-    Vector3 standardYPosition;
     public float speed;
     public float swayAmount = 19;
-    private float internalTimer;
-    private float fireballTimer;
-    private float skeletonTimer;
+
+    //References
     public GameObject skeletonMinion;
     public GameObject player;
     public GameObject fireball;
-    Vector3 playerPosition;
     public GameObject ladder;
-    
+
+    //Positions
+    Vector3 defaultPosition;
+    Vector3 standardYPosition;
+    Vector3 playerPosition;
+
+    //Timers
+    private float internalTimer;
+    private float fireballTimer;
+    private float skeletonTimer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -98,11 +101,10 @@ public class FinalBossBehavior : MonoBehaviour
             player.GetComponent<PlayerStats>().consumesMagic();
         }
         if(health < 0){
+            //activate ladder
             ladder.SetActive(true);
             Destroy(gameObject);
         }
-
-        //if player magic is 0, destroy player
         
     }
 }

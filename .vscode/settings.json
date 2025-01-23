@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Dungeon Explorer.sln"
+    "dotnet.defaultSolution": "DungeonEscape.sln"
 }
